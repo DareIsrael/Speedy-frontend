@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-console.log(process.env)
+
 
 function ShipmentNews() {
   const [news, setNews] = useState([]);
