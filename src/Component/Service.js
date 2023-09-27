@@ -12,6 +12,7 @@ import ServiceContact from "./ServiceContact";
 import Service9 from "./Service9";
 import Service10 from "./Service10";
 import Service11 from "./Service11";
+import News2 from "./News2"
 
 function Service () {
     return (
@@ -22,6 +23,7 @@ function Service () {
         <Service4 />
         <Service5 />
         <Service10 />
+        <News2 />
         <Service11 />
         <Service9 />
         <ServiceContact />
