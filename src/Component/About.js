@@ -15,7 +15,7 @@ function About () {
             <About1 />
             <About2 />
             <Service8 />
-            <News />
+           
             <Home7 />
             <About3 />
             <Home6 />
