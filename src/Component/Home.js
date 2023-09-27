@@ -15,7 +15,7 @@ import Weather from "./Weather";
 import GoogleMapRen from "./GoogleMapRen";
 
 import Search from "./Search";
-import Tracking from "./Tracking";
+
 
 
 function Home () {
@@ -30,7 +30,7 @@ function Home () {
             <Home5 />
             <Weather />
             <Home6 />
-            <Tracking />
+            
             <Home7 />
           
             <GoogleMapRen />
