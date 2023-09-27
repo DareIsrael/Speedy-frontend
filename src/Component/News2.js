@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import NEWS_API_KEY from "./NewsApiKey"
+
 
 console.log(process.env)
 
 function ShipmentNews() {
   const [news, setNews] = useState([]);
-  const apiKey = NEWS_API_KEY;
-// const apiKey = "3ee11dc7fe9d40b199e62099f007be6c"
+  
+const apiKey = "3ee11dc7fe9d40b199e62099f007be6c"
 
   useEffect(() => {
     const fetchNews = async () => {
