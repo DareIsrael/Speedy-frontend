@@ -23,7 +23,7 @@ function Service () {
         <Service4 />
         <Service5 />
         <Service10 />
-        <News2 />
+       
         <Service11 />
         <Service9 />
         <ServiceContact />

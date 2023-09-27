@@ -52,33 +52,35 @@
 // }
 
 // export default ShipmentNews;
+// "7934a387e916feb02b3787743e1aafce";
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function ShipmentNews() {
   const [news, setNews] = useState([]);
-  const apiKey = "3ee11dc7fe9d40b199e62099f007be6c";
+  const apiKey = "7934a387e916feb02b3787743e1aafce"; // Replace with your GNews API key
 
-  const fetchNews = async () => {
-    try {
-      const response = await fetch(
-        `https://newsapi.org/v2/everything?q=shipment&apiKey=${apiKey}`
-      );
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await fetch(
+          `https://gnews.io/api/v4/top-headlines?q=shipment&token=${apiKey}`
+        );
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        setNews(data.articles);
+      } catch (error) {
+        console.error('Error fetching news:', error);
       }
+    };
 
-      const data = await response.json();
-      setNews(data.articles);
-    } catch (error) {
-      console.error('Error fetching news:', error);
-    }
-  };
-
-  // Call fetchNews when the component renders
-  fetchNews();
+    fetchNews();
+  }, []);
 
   return (
     <div className='news1'>
@@ -88,7 +90,7 @@ function ShipmentNews() {
           <li key={index}>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
               <img
-                src={article.urlToImage}
+                src={article.image}
                 alt={article.title}
                 width="100"
                 height="100"
