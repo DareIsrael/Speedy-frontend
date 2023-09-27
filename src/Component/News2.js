@@ -6,13 +6,13 @@ import React, { useState, useEffect } from 'react';
 function ShipmentNews() {
   const [news, setNews] = useState([]);
   
-// const apiKey = "3ee11dc7fe9d40b199e62099f007be6c"
+const apiKey = "3ee11dc7fe9d40b199e62099f007be6c"
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const response = await fetch(
-          `https://newsapi.org/v2/everything?q=shipment&apiKey=3ee11dc7fe9d40b199e62099f007be6c`
+          `https://newsapi.org/v2/everything?q=shipment&apiKey=${apiKey}`
         );
 
         if (!response.ok) {
@@ -27,7 +27,7 @@ function ShipmentNews() {
     };
 
     fetchNews();
-  }, []);
+  }, [apiKey]);
 
   return (
     <div className='news1'>
