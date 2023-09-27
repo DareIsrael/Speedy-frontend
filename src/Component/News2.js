@@ -27,7 +27,7 @@ const apiKey = "3ee11dc7fe9d40b199e62099f007be6c"
     };
 
     fetchNews();
-  }, [apiKey]);
+  }, []);
 
   return (
     <div className='news1'>
