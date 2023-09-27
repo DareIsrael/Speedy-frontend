@@ -7,6 +7,7 @@ import About3 from "./About3";
 import Home6 from "./Home6";
 import ServiceContact from "./ServiceContact";
 import Bottom from "./Bottom";
+import News from "./News";
 
 function About () {
     return (
@@ -14,6 +15,7 @@ function About () {
             <About1 />
             <About2 />
             <Service8 />
+            <News />
             <Home7 />
             <About3 />
             <Home6 />
