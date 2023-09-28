@@ -46,7 +46,7 @@ function OceanCargo2 () {
         consigneeAddress, consigneePostcode, consigneePrefSertime
       }
 
-      const response = await fetch ("/api/ocean", {
+      const response = await fetch ("https://speedyspell-api.onrender.com/api/ocean", {
           method: 'POST',
           body: JSON.stringify(consignor),
           headers: {

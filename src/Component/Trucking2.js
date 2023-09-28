@@ -57,7 +57,7 @@ function Trucking2 () {
         consigneeAddress, consigneePostcode, consigneePrefSertime
       }
 
-      const response = await fetch ("/api/truck", {
+      const response = await fetch ("https://speedyspell-api.onrender.com/api/truck", {
           method: 'POST',
           body: JSON.stringify(consignor),
           headers: {

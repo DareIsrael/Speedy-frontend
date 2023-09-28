@@ -48,7 +48,7 @@ function Couriercargo2 () {
         consigneeAddress, consigneePrefSerdate, consigneePrefSertime
       }
 
-      const response = await fetch ("/api/courier", {
+      const response = await fetch ("https://speedyspell-api.onrender.com/api/courier", {
           method: 'POST',
           body: JSON.stringify(courierConsignor ),
           headers: {

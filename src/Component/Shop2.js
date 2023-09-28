@@ -21,7 +21,7 @@ function Shop2() {
     useEffect (() => {
         const fetchPosts = async () => {
 
-            const response = await fetch ('/api/post')
+            const response = await fetch ('https://speedyspell-api.onrender.com/api/post')
             const json = await response.json()
 
             if (response.ok) {

@@ -48,7 +48,7 @@ function AirCargo2 () {
         consigneeAddress, consigneePostcode, consigneePrefSertime
       }
 
-      const response = await fetch ("/api/air", {
+      const response = await fetch ("https://speedyspell-api.onrender.com/api/air", {
           method: 'POST',
           body: JSON.stringify(airConsignor ),
           headers: {
