@@ -11,7 +11,7 @@ function Service2 () {
         <h1>Logging trucks</h1>
         <p>A logging truck or timber lorry is a large truck used to
              carry logs to the construction.</p>
-            <a href="/calculator"> <button>GET QUOTE</button> </a> 
+            <a href="/login"> <button>GET QUOTE</button> </a> 
         </div>
         
         </div>
@@ -20,7 +20,7 @@ function Service2 () {
         <div className="serv2-3">
          <h1> Concrete trucks </h1>
          <p> Special concrete transport trucks are made to transport and mix concrete up.</p>
-         <a href="/calculator"><button>GET QUOTE</button></a> 
+         <a href="/login"><button>GET QUOTE</button></a> 
         </div>
         </div>
         <div className="serv2-2">
@@ -28,7 +28,7 @@ function Service2 () {
         <div className="serv2-3">
         <h1>Dump trucks</h1>
         <p>A dump truck is a truck used for transporting loose material for construction.</p>
-        <a href="/calculator"> <button>GET QUOTE</button> </a> 
+        <a href="/login"> <button>GET QUOTE</button> </a> 
         </div>
         
         </div>

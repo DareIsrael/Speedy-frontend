@@ -5,7 +5,7 @@ import Trucking from "./Trucking";
 
 import Trucking2 from "./Trucking2";
 import Couriercargo2 from "./Couriercargo2";
-import AirCargo from "./AirCargo";
+
 import AirCargo2 from "./AirCargo2";
 import OceanCargo2 from "./OceanCargo2";
 
