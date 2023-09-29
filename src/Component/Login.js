@@ -39,6 +39,7 @@ function Login () {
     <input type="Password" placeholder="🔒 Password" onChange={(e) => setPassword (e.target.value)} value={password} />
     <button disabled={isloading}>login</button>
     {error && <div className="error">{error}</div>}
+ 
     </form>
     <p><a href="/register">Register</a> an account</p>
 

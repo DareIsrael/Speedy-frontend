@@ -175,6 +175,7 @@ li {
 .log-d {
     width: 50%;
     text-align: center;
+   
 
     
 }
@@ -215,12 +216,13 @@ li {
   
     background-color: #e3e0cc;
     color: black;
-    height: 400px;
+    height: 450px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     padding: 60px;
     border-radius: 10px;
+    
     
 
 }
@@ -1753,6 +1755,10 @@ li :hover {
             margin-right: 10px;
             margin-top: 15px;
          }
+         .error {
+            color: red;
+            font-style: italic;
+         }
 
          .error-res {
             background-color: rgb(241, 147, 147);
@@ -2636,6 +2642,10 @@ li :hover {
      font-size: 30px;
      color: green;
      border-radius: 10px;
+    }
+    .error {
+        font-size: 36px;
+        color: red;
     }
 
     .error-res {
