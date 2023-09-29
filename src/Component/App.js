@@ -43,24 +43,24 @@ function App () {
   <Routes>
     <Route path="/" element={<Navbar />}>
       <Route index element={ <Home /> } />
-       <Route path="service" element={<Service />} />
-       <Route path="about" element={<About />} /> 
-       <Route path="news" element={<News />} />
-       <Route path="shop" element={<Shop />} />
-       <Route path="contact" element={<Contact />} />
-       <Route path="calculator" element={user?  <Calculator /> : <Navigate to="/login" /> } />
-       <Route path="search" element= { <Search />} />
-       <Route path="home11" element={user? <Home11 /> : <Navigate to="/login" />}/>
-       <Route path="news" element={<News />}/>
+       <Route path="/service" element={<Service />} />
+       <Route path="/about" element={<About />} /> 
+       <Route path="/news" element={<News />} />
+       <Route path="/shop" element={<Shop />} />
+       <Route path="/contact" element={<Contact />} />
+       <Route path="/calculator" element={user?  <Calculator /> : <Navigate to="/login" /> } />
+       <Route path="/search" element= { <Search />} />
+       <Route path="/home11" element={user? <Home11 /> : <Navigate to="/login" />}/>
+       <Route path="/news" element={<News />}/>
           
           
         
-       <Route path="sregister" element= {<SRegister />} />
+       <Route path="/sregister" element= {<SRegister />} />
        
-        <Route path="LogReg" element={<LogReg />} />
-        <Route path="register" element= {!user ? <Register /> : <Navigate to= "/sregister" /> } />
+        <Route path="/LogReg" element={<LogReg />} />
+        <Route path="/register" element= {!user ? <Register /> : <Navigate to= "/sregister" /> } />
 
-        <Route path="login" element={ !user? <Login /> : <Navigate to= "/calculator" />} />
+        <Route path="/login" element={ !user? <Login /> : <Navigate to= "/calculator" />} />
     
   
 
