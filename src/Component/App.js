@@ -60,7 +60,7 @@ function App () {
         <Route path="LogReg" element={<LogReg />} />
         <Route path="register" element= {!user ? <Register /> : <Navigate to= "/sregister" /> } />
 
-        <Route path="/login" element={ !user? <Login /> : <Navigate to= "/calculator" />} />
+        <Route path="login" element={ !user? <Login /> : <Navigate to= "/calculator" />} />
     
   
 
