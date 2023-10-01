@@ -12,6 +12,7 @@ export const useLogin = () => {
     const login = async ( email, password) => {
         setIsLoading(true)
         setError (null)
+      
 
         const response = await fetch ('https://speedyspell-api.onrender.com/api/user/login', {
             method: 'POST',
@@ -20,51 +21,16 @@ export const useLogin = () => {
         })
         const json = await response.json()
 
-        // if (!response.ok) {
-        //     setIsLoading(false)
-        //     setError(json.error)
-        //     console.log('Error object from API:', json.error);
-            
-        //       toast.error('Login failed. Please check your credentials and try again.', {
-        //         position: 'top-right', // You can adjust the position as needed
-        //         autoClose: 3000,
-        //         hideProgressBar: false,
-        //         closeOnClick: true,
-        //         pauseOnHover: true,
-        //         draggable: true,
-        //       });
-        // }
-        // if(response.ok) {
-              
-        //     toast.success('Login successful!', {
-        //         position: 'top-right', // You can adjust the position as needed
-        //         autoClose: 3000, // Duration in milliseconds
-        //         hideProgressBar: false,
-        //         closeOnClick: true,
-        //         pauseOnHover: true,
-        //         draggable: true,
-        //       });
-          
-            
-        //     // localStorage.setItem('user', JSON.stringify(json))
-        //     localStorage.setItem('user', JSON.stringify(json))
-            
-
-        //     dispatch({type: 'LOGIN', payload: json})
-          
-
-        //     setIsLoading(false)
-        // }
-
+       
         if (response.ok) {
             // Update the user state and perform other actions
             dispatch({ type: 'LOGIN', payload: json });
           
             // Store user data in localStorage
             localStorage.setItem('user', JSON.stringify(json));
-          
+            
             // Display success toast after the user state has been updated
-            toast.success('Login successful!', {
+            toast.success(' ✔️ Login successful!', {
               position: 'top-right', // You can adjust the position as needed
               autoClose: 3000, // Duration in milliseconds
               hideProgressBar: false,

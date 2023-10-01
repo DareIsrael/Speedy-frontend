@@ -2738,6 +2738,13 @@ li :hover {
         font-size: 30px;
     }
 
-    
+    .Toastify__toast-body {
+        font-size: 28px; 
+       
+      }
+
+      .Toastify__toast-container {
+        width: 500px !important;
+      }
     
 }

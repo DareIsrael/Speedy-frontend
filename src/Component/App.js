@@ -24,8 +24,9 @@ import Home2 from "./Home2";
 import Home3 from "./Home3";
 import Home6 from "./Home6";
 import Pricing from "./Pricing";
-
-
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -39,7 +40,7 @@ function App () {
   
   return (
     <BrowserRouter>
-
+    <ToastContainer />
   <Routes>
     <Route path="/" element={<Navbar />}>
       <Route index element={ <Home /> } />

@@ -40,7 +40,10 @@ function Register () {
            and within any service time frame, giving you our
             very best and bringing a win-win situation to the table..</h2>
          </div>
+         
          <ToastContainer />
+       
+         
      <div className= "register"  >
         <h1>Register an account</h1>
 
