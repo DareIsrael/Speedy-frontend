@@ -1,5 +1,8 @@
 import react, { useState } from "react" 
 import { useSignup } from "../hooks/useSignup"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 
 function Register () {
@@ -16,26 +19,57 @@ function Register () {
 
     const {signup, error, isloading} = useSignup()
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
+
+    //     await signup( fName, lName, cName, phone, sAddress,
+    //         city, country,email, password)
+    // }
+
+
+
     const handleSubmit = async (e) => {
-        e.preventDefault()
-
-        await signup( fName, lName, cName, phone, sAddress,
-            city, country,email, password)
-    }
-
-
+        e.preventDefault();
+      
+        try {
+          // Call your signup function
+          await signup(fName, lName, cName, phone, sAddress, city, country, email, password);
+      
+          // If registration is successful, display a success toast notification
+          toast.success('Registration successful!', {
+            position: 'top-right', // You can adjust the position as needed
+            autoClose: 3000, // Duration in milliseconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+        } catch (error) {
+          // Handle any errors that may occur during signup
+          console.error('Error during registration:', error);
+          toast.error('Registration failed. Please try again.', {
+            position: 'top-right', // You can adjust the position as needed
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+        }
+      };
+      
 
     return  (
 
         <div className="log-p">
-
+       
        <div className="log-d">
           <h1>SPEEDY-SPELL</h1>
            <h2>We can handle any size of load, to-and-from anyplace, 
            and within any service time frame, giving you our
             very best and bringing a win-win situation to the table..</h2>
          </div>
-
+         <ToastContainer />
      <div className= "register"  >
         <h1>Register an account</h1>
 
