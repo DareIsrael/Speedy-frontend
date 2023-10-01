@@ -19,45 +19,16 @@ function Register () {
 
     const {signup, error, isloading} = useSignup()
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-
-    //     await signup( fName, lName, cName, phone, sAddress,
-    //         city, country,email, password)
-    // }
-
-
-
     const handleSubmit = async (e) => {
-        e.preventDefault();
-      
-        try {
-          // Call your signup function
-          await signup(fName, lName, cName, phone, sAddress, city, country, email, password);
-      
-          // If registration is successful, display a success toast notification
-          toast.success('Registration successful!', {
-            position: 'top-right', // You can adjust the position as needed
-            autoClose: 3000, // Duration in milliseconds
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-          });
-        } catch (error) {
-          // Handle any errors that may occur during signup
-          console.error('Error during registration:', error);
-          toast.error('Registration failed. Please try again.', {
-            position: 'top-right', // You can adjust the position as needed
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-          });
-        }
-      };
-      
+        e.preventDefault()
+
+        await signup( fName, lName, cName, phone, sAddress,
+            city, country,email, password)
+    }
+
+
+
+    
 
     return  (
 

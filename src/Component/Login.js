@@ -13,43 +13,13 @@ function Login () {
     const [password, setPassword] = useState ('')
     const {login, error, isloading} = useLogin()
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-
-    //     await login( email, password )
-    // }
-
-
     const handleSubmit = async (e) => {
-      e.preventDefault();
-    
-      try {
-        // Call your login function
-        await login ( email, password );
-    
-        // If login is successful, display a success toast notification
-        toast.success('Login successful!', {
-          position: 'top-right', // You can adjust the position as needed
-          autoClose: 3000, // Duration in milliseconds
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
-      } catch (error) {
-        // Handle any errors that may occur during login
-        console.error('Error during login:', error);
-        toast.error('Login failed. Please check your credentials and try again.', {
-          position: 'top-right', // You can adjust the position as needed
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
-      }
-    };
-    
+        e.preventDefault()
+
+        await login( email, password )
+    }
+
+
     
      
     return (
