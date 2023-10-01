@@ -44,7 +44,7 @@ export const useSignup = () => {
             setError(json.error);
           
             // Display error toast for failed registration
-            toast.error('Registration failed. Please provide valid input.', {
+            toast.error('Registration failed. Please provide a valid input.', {
               position: 'top-right', // You can adjust the position as needed
               autoClose: 3000,
               hideProgressBar: false,

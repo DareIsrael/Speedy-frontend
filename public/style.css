@@ -2739,12 +2739,12 @@ li :hover {
     }
 
     .Toastify__toast-body {
-        font-size: 28px; 
+        font-size: 30px; 
        
       }
 
       .Toastify__toast-container {
-        width: 500px !important;
+        width: 600px !important;
       }
     
 }
