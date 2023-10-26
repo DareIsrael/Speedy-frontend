@@ -33,27 +33,19 @@ function Navbar () {
        
     }
 
-  //   const [textbox, setTextbox] = useState ("searchinput");
-
-  //   function searchbox () {
-  //      if(textbox === "searchinput") {
-  //        return (
-  //           setTextbox ("searchinput2")
-  //        )
-  //      } else {
-  //        return (
-  //           setTextbox ("searchinput")
-  //        )
-  //        }
-      
-  //  }
-
-   
-   
-   
-       
-     
-   
+    useEffect(() => {
+      const closeMobileNav = () => {
+        setShow(false);
+      };
+  
+      if (show) {
+        document.addEventListener("click", closeMobileNav);
+      }
+  
+      return () => {
+        document.removeEventListener("click", closeMobileNav);
+      };
+    }, [show]);
    
     
   return (
@@ -132,3 +124,98 @@ export default Navbar;
     
 
 
+
+// import React, { useState, useEffect, useRef } from "react";
+// import { Outlet, Link } from "react-router-dom";
+// import { useLogout } from "../hooks/useLogout";
+// import { useAuthContext } from "../hooks/useAuthContext";
+// import { Icon } from '@iconify/react';
+
+// function Navbar() {
+//   const { logout } = useLogout();
+//   const { user } = useAuthContext();
+//   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+//   const mobileNavRef = useRef(null);
+
+//   useEffect(() => {
+//     const closeMobileNav = () => {
+//       setMobileNavOpen(false);
+//     };
+
+//     if (mobileNavOpen) {
+//       document.addEventListener("click", closeMobileNav);
+//     }
+
+//     return () => {
+//       document.removeEventListener("click", closeMobileNav);
+//     };
+//   }, [mobileNavOpen]);
+
+//   const toggleMobileNav = () => {
+//     setMobileNavOpen(!mobileNavOpen);
+//   };
+
+//   return (
+//     <div className="cargoNav">
+//       <nav className="nav">
+//         <div className="cargoinfo">
+//           <a href="/">
+//             <Icon icon="subway:world" className="logo" />
+//           </a>
+//           <span className="logoname">SPEEDY-SPELL</span>
+//         </div>
+//         <div
+//           ref={mobileNavRef}
+//           className={mobileNavOpen ? "nav-active" : "nav-1"}
+//         >
+//           <ul>
+//             <li onClick={toggleMobileNav}>
+//               <Link className="navli" to="/">
+//                 HOME
+//               </Link>
+//             </li>
+//             <li onClick={toggleMobileNav}><Link className="navli" to="/service">SERVICES</Link></li> 
+// //          <li onClick={toggleMobileNav} ><Link className="navli" to="/about">ABOUT US</Link></li>
+       
+// //          <li onClick={toggleMobileNav} ><Link className="navli" to="/shop">SHOP</Link></li>
+// //          <li onClick={toggleMobileNav} ><Link className="navli" to="/news">BLOG/NEWS</Link></li>
+// //          <li onClick={toggleMobileNav} ><Link className="navli" to="/contact">CONTACT</Link></li>
+//             {/* Add more mobile navigation items */}
+//           </ul>
+//           <div className="navlog">
+//             {user && (
+//               <div>
+//                 <span>{user.email}</span>
+//                 <button className="logout" onClick={logout}>
+//                   Logout
+//                 </button>
+//               </div>
+//             )}
+//             {!user && (
+//               <div className="navlog2">
+//                 <li onClick={toggleMobileNav}>
+//                   <Link className="navli2" to="/register">
+//                     Register
+//                   </Link>
+//                 </li>
+//                 <li onClick={toggleMobileNav}>
+//                   <Link className="navli" to="/login">
+//                     Login
+//                   </Link>
+//                 </li>
+//               </div>
+//             )}
+//           </div>
+//         </div>
+//         <div onClick={toggleMobileNav}>
+//           <div className="navIcon" onClick={toggleMobileNav}>
+//             <Icon icon="tdesign:menu" />
+//           </div>
+//         </div>
+//       </nav>
+//       <Outlet />
+//     </div>
+//   );
+// }
+
+// export default Navbar;
