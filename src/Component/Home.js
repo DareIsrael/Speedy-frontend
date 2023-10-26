@@ -28,7 +28,7 @@ function Home () {
             <Home3 />
             <Home4 />
             <Home5 />
-            {/* <Weather /> */}
+            <Weather />
             <Home6 />
             
             <Home7 />
