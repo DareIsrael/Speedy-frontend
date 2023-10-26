@@ -29,7 +29,3 @@ function ShopProducts ( { post } ) {
 
 export default ShopProducts;
 
-// Daf, 7.5 tones
-// #12,000,000
-// "images/cat1.jpeg"
-// onClick={addup2}
