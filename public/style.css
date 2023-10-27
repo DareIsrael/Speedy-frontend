@@ -2749,6 +2749,11 @@ li :hover {
     .cal-user-img {
         font-size: 150px;
     }
+    .cal span {
+        font-size: 45px;
+        margin-top: 15px;
+
+    }
     .Toastify__toast-body {
         font-size: 30px; 
        
