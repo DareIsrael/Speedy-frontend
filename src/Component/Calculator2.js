@@ -8,6 +8,7 @@ import Couriercargo2 from "./Couriercargo2";
 
 import AirCargo2 from "./AirCargo2";
 import OceanCargo2 from "./OceanCargo2";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 
 function Calculator2 () {
@@ -18,6 +19,9 @@ function Calculator2 () {
    const [courier, setCourier] = useState()
    const [aircargo, setAircargo] = useState()
    const [oceancargo, setOceancargo] = useState()
+
+
+   const { user } = useAuthContext ()
 
     function Trucking () {
          return (
@@ -46,6 +50,11 @@ function Calculator2 () {
     return (
         
        <div className="Cal">
+        <div className="cal-user">
+         <Icon className="cal-user-img" icon="fluent-mdl2:contact" />
+         <span>{user.email}</span>
+        </div>
+        
         <div className="Cal-1">
     
         <div className="Cal-2">

@@ -1778,7 +1778,14 @@ li :hover {
             margin-top: 10px;
             width: 300px;
          }
-
+        
+         .cal-user{
+            display: flex;
+            gap: 1.5rem;
+         }
+         .cal-user-img {
+            font-size: 60px;
+         }
 
 @media (max-width: 1028px ) {
     .cargoNav {
@@ -2738,7 +2745,10 @@ li :hover {
     .user button {
         font-size: 30px;
     }
-
+     
+    .cal-user-img {
+        font-size: 150px;
+    }
     .Toastify__toast-body {
         font-size: 30px; 
        
